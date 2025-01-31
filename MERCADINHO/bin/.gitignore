@@ -1,9 +1,2 @@
-/ConnectionFactoy/
-/Controller/
-/DAO/
-/Icons/
-/Images/
-/Model/
-/View/
 /application/
-/module-info.class
+/ConnectionFactoy/

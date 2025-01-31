@@ -1,5 +1,8 @@
 package application;
 	
+import java.sql.Connection;
+
+import ConnectionFactoy.ConnectionDatabase;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -21,6 +24,9 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
+		
+		Connection con = ConnectionDatabase.getConnection();
+		ConnectionDatabase.closeConnection(con);
 		launch(args);
 	}
 }
