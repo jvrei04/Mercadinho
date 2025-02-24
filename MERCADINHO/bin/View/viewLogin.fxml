@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-
-<AnchorPane prefHeight="582.0" prefWidth="734.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1">
-	<!-- TODO Add Nodes -->
+<AnchorPane fx:id="Login" prefHeight="480.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.controllerLogin">
+   <children>
+      <Pane layoutX="121.0" layoutY="91.0" prefHeight="396.0" prefWidth="384.0">
+         <children>
+            <TextField fx:id="txtUser" layoutX="90.0" layoutY="136.0" />
+            <PasswordField fx:id="txtPassword" layoutX="90.0" layoutY="248.0" />
+         </children></Pane>
+      <Button fx:id="btLogin" layoutX="241.0" layoutY="390.0" mnemonicParsing="false" onAction="#actionLogin" prefHeight="26.0" prefWidth="150.0" text="TO ENTER" />
+      <Label layoutX="213.0" layoutY="314.0" text="PASSWORD" />
+      <Label layoutX="213.0" layoutY="205.0" text="USER" />
+      <Label layoutX="288.0" layoutY="86.0" text="WELCOME BACK" />
+      <Label layoutX="207.0" layoutY="120.0" text="Log in with your username and password" />
+   </children>
 </AnchorPane>
