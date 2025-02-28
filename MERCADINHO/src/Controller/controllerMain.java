@@ -1,5 +1,6 @@
 package Controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -74,8 +75,8 @@ public class controllerMain implements Initializable{
 	    private Label txtTotalVendido;
 
 	    @FXML
-	    void telaCliente(ActionEvent event) {
-
+	    void telaCliente(ActionEvent event) throws IOException {
+	    	Main.TelaCliente();
 	    }
 
 	    @FXML

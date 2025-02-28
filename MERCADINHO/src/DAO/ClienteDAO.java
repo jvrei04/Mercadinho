@@ -42,7 +42,7 @@ public class ClienteDAO {
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		ArrayList<Cliente> clientes = new ArrayList<>();
-		
+		int i =1;
 		try {
 			stmt = con.prepareStatement("select * from Cliente");
 			rs = stmt.executeQuery();
@@ -50,7 +50,7 @@ public class ClienteDAO {
 			while(rs.next()) {
 				Cliente cliente = new Cliente();
 				
-				cliente.setId(rs.getString(1));
+				cliente.setId(""+i);
 				cliente.setNome(rs.getString(2));
 				cliente.setCpf(rs.getString(3));
 				cliente.setDataNasc(rs.getString(4));
@@ -60,6 +60,7 @@ public class ClienteDAO {
 				cliente.setTelefone(rs.getString(8));
 				
 				clientes.add(cliente);
+				i++;
 			}
 			
 		} catch (SQLException e) {

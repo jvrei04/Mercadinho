@@ -17,9 +17,11 @@ import Model.Produto;
 import Model.Venda;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 
 
@@ -41,6 +43,7 @@ public class Main extends Application {
 			//Parent fxmlMain = FXMLLoader.load(getClass().getResource("/View/viewMain.fxml"));
 			//main = new Scene(fxmlMain);
 			
+			stage.getIcons().add(new Image (getClass().getResourceAsStream("/Icons/images.png")));
 			
 			
 			
@@ -74,6 +77,36 @@ public class Main extends Application {
 		stage.setResizable(false);
 		stage.centerOnScreen();
 		stage.show();
+	}
+	
+	public static void TelaCliente() throws IOException {
+		FXMLLoader fxmlCliente = new FXMLLoader();
+		fxmlCliente.setLocation(Main.class.getResource("/View/viewCliente.fxml"));
+		Parent TelaCliente = fxmlCliente.load();
+		main = new Scene(TelaCliente);
+		
+		
+		stage.setScene(main);
+		stage.setResizable(false);
+		stage.centerOnScreen();
+		stage.show();
+		}
+	
+	private static Stage cadCliente;
+	public static void TelaCadastroCliente()throws IOException{
+		FXMLLoader fxmlCadastroCliente = new FXMLLoader();
+		fxmlCadastroCliente.setLocation(Main.class.getResource("/View/viewCadastroCliente.fxml"));
+		Parent cadastroCliente = fxmlCadastroCliente.load();
+		Scene scene2 = new Scene(cadastroCliente);
+		
+		
+		cadCliente = new Stage();
+		cadCliente.setTitle("Register/Edit Customers");
+		cadCliente.initModality(Modality.WINDOW_MODAL);
+		cadCliente.setScene(scene2);
+		cadCliente.centerOnScreen();
+		cadCliente.showAndWait();		
+		
 	}
 
 	
