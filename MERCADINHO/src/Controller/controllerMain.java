@@ -113,10 +113,15 @@ public class controllerMain implements Initializable{
 
 	    }
 
+ 
 	    @FXML
-	    void telaVenda(MouseEvent event) {
-
+	    void telaVenda(ActionEvent event) throws IOException {
+	    	Main.TelaRegistroVenda();
 	    }
+	    
+	    @FXML
+	    private Button btRegistrarVenda;
+	    
 	    @FXML
 	    private TableColumn<Produto,String> columnEstoqueAVencer;
 

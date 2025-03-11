@@ -108,6 +108,22 @@ public class Main extends Application {
 		cadCliente.showAndWait();		
 		
 	}
+	private static Stage venda;
+	public static void TelaRegistroVenda()throws IOException{
+		FXMLLoader fxmlRegistrarVenda = new FXMLLoader();
+		fxmlRegistrarVenda.setLocation(Main.class.getResource("/View/viewRegistrarVenda.fxml"));
+		Parent registrarVenda = fxmlRegistrarVenda.load();
+		Scene scene2 = new Scene(registrarVenda);
+		
+		
+		venda = new Stage();
+		venda.setTitle("Customer registration/editing");
+		venda.initModality(Modality.WINDOW_MODAL);
+		venda.setScene(scene2);
+		venda.centerOnScreen();
+		venda.showAndWait();		
+		
+	}
 
 	
 	public static void main(String[] args) {
@@ -134,88 +150,7 @@ public class Main extends Application {
 		System.out.println(cliente.getEndereco()+ "|");
 		System.out.println(cliente.getGenero()+ "|");
 		System.out.println(cliente.getTelefone()+ "|");
-	}
-		
-		
-		
-		
-		
-		
-//		Cliente cliente = new Cliente();
-//		cliente.setNome("Junin 244");
-//		cliente.setCpf("05296385725");
-//		cliente.setDataNasc("2003-04-25");
-//		cliente.setEmail("junin898grau@gmail.com");
-//		cliente.setEndereco("Rua das flores, numero 12");
-//		cliente.setTelefone("634585859");
-//		cliente.setGenero("masculino");
-//		
-//		ClienteDAO clienteDAO = new ClienteDAO();
-//		clienteDAO.delete(cliente);
-//	
-		
-		
-
-//		    Funcionario funcionario = new Funcionario();
-//		    funcionario.setNome("Carlos Silva");
-//		    funcionario.setCpf("12345678900");
-//		    funcionario.setDataDeNascimento("1990-05-15");
-//		    funcionario.setEmail("carlos@empresa.com");
-//		    funcionario.setGenero("Masculino");
-//		    funcionario.setEndereco("Rua Central, 123");
-//		    funcionario.setTelefone("11987654321");
-//		    funcionario.setCargo("Gerente");
-//		    funcionario.setSalario("4500.00");
-//		    funcionario.setDataDeAdimissao("2023-01-10");
-//		    funcionario.setSenha("senha123");
-//
-//		    FuncionarioDAO funcionarioDAO = new FuncionarioDAO(); 
-//		    funcionarioDAO.delete(funcionario); 
-////		
-	  //Produto produto = new Produto();
-	       // produto.setIdProduto("49");
-	     //   produto.setIdfornecedor("4");
-	    //    produto.setNome("Produto Exemplo");
-	    //    produto.setCodBarra("2456678");
-	   //     produto.setLote("Lote123");
-	   //     produto.setDataFab("2024-01-03");
-	   //     produto.setDataVal("2025-01-21");
-	 //       produto.setMarca("MarcaX");
-//	        produto.setCategoria("CategoriaA");
-////	        produto.setUnidadeDeMedida("Un");
-////	        produto.setPrecoUnitario("100");
-////	        produto.setEstoque("50");
-////	        
-       // ProdutoDAO produtoDAO = new ProdutoDAO();
-        //produtoDAO.delete(produto);
-//				
-
-		
-		
-//		Venda venda = new Venda();
-//		venda.setIdvenda("1");
-//		venda.setIdcliente("6");
-//		venda.setIdfuncionario("1");
-//		venda.setFormaDePagamento("1");
-//		venda.setDesconto("10.00");
-//		venda.setDataVenda("");
-//		venda.setPrecoTotal("200.00");
-//
-//		VendaDAO vendaDAO = new VendaDAO();
-//		vendaDAO.delete(venda);
-		
-	
-		
-		
-		//ProdutoVenda produtoVenda = new ProdutoVenda();
-		//produtoVenda.setIdprodutovenda("41");
-		//produtoVenda.setIdvenda("31");
-		//produtoVenda.setIdproduto("3");
-		//produtoVenda.setQuantidade("5");
-
-		//ProdutoVendaDAO produtoVendaDAO = new ProdutoVendaDAO();
-		//produtoVendaDAO.delete(produtoVenda);
-			
+	}							
   launch(args);
 	}
 }

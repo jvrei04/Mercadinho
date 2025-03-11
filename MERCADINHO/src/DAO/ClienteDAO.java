@@ -78,7 +78,7 @@ public class ClienteDAO {
 		PreparedStatement stmt = null;
 		
 		try {
-			stmt = con.prepareStatement("Update Cliente set nomeCliente = ? , cpfCliente = ?, dataDeNascimento = ?, emailCliente = ?, generoCliente = ?, enderecoCliente = ?, telefoneCliente = ? where idCliente = ? or cpfCliente = ?");
+			stmt = con.prepareStatement("Update Cliente set nomeCliente = ? , cpfCliente = ?, dataDeNascimento = ?, emailCliente = ?, generoCliente = ?, enderecoCliente = ?, telefoneCliente = ? where cpfCliente = ?");
 			stmt.setString(1, cliente.getNome());
 			stmt.setString(2, cliente.getCpf());
 			stmt.setString(3, cliente.getDataNasc());
