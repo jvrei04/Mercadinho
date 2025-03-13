@@ -165,4 +165,25 @@ try {
 		}
 		return clientes;
 	}
+	public ArrayList<String> readClienteByNome(){
+		Connection con = ConnectionDatabase.getConnection();
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		ArrayList<String> clientes = new ArrayList<>();
+		try {
+			stmt = con.prepareStatement("SELECT nomeCliente FROM Cliente");
+			rs = stmt.executeQuery();
+			
+			while (rs.next()) {
+				String nome;
+				nome = rs.getString(1);
+				clientes.add(nome);
+			}
+		} catch (SQLException e) {
+			throw new RuntimeException("Erro ao ler os clientes!",e);
+		}finally {
+			ConnectionDatabase.closeConnection(con, stmt, rs);
+		}
+		return clientes;
+	}
 }
