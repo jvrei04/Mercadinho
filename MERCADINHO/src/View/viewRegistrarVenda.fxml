@@ -149,16 +149,16 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="597.0" layoutY="376.0" text="Forma de PGTO">
+      <Label layoutX="601.0" layoutY="406.0" text="Forma de PGTO">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="choiceFormaPGTO" layoutX="597.0" layoutY="404.0" prefHeight="38.0" prefWidth="242.0" style="-fx-background-color: FFFFFF; -fx-border-color: FF8401; -fx-background-radius: 10; -fx-border-radius: 10;" />
+      <ChoiceBox fx:id="choiceFormaPGTO" layoutX="598.0" layoutY="440.0" prefHeight="38.0" prefWidth="242.0" style="-fx-background-color: FFFFFF; -fx-border-color: FF8401; -fx-background-radius: 10; -fx-border-radius: 10;" />
       <TableView fx:id="tableProdutos" layoutX="163.0" layoutY="380.0" prefHeight="256.0" prefWidth="423.0">
         <columns>
           <TableColumn fx:id="columnIndice" prefWidth="20.79998779296875" />
-          <TableColumn fx:id="columnNome" prefWidth="165.59996032714844" text="Produto" />
+          <TableColumn fx:id="columnProduto" prefWidth="165.59996032714844" text="Produto" />
             <TableColumn fx:id="columnQuantidade" prefWidth="72.00006103515625" text="Quantidade" />
             <TableColumn fx:id="columnPrecoUn" prefWidth="84.800048828125" text="Preço UN." />
             <TableColumn fx:id="columnPrecoTotal" prefWidth="77.59996337890624" text="Preço total" />
@@ -179,5 +179,6 @@
             <Font size="16.0" />
          </font>
       </TextField>
+      <Button fx:id="btAdicionar" layoutX="662.0" layoutY="368.0" mnemonicParsing="false" onAction="#actionAdicionar" prefHeight="26.0" prefWidth="80.0" text="ADICIONAR" />
    </children>
 </AnchorPane>

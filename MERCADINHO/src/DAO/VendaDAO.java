@@ -167,6 +167,31 @@ public class VendaDAO {
 				}
 				return vendas;
 			}
+			public String readId(){
+				Connection con = ConnectionDatabase.getConnection();
+				PreparedStatement stmt = null;
+				ResultSet rs = null;
+				String idVenda = null;
+				
+				try {
+					stmt = con.prepareStatement("select * from Venda");
+					rs = stmt.executeQuery();
+					
+					while(rs.next()) {
+						Venda venda = new Venda();
+						
+						idVenda = rs.getString(1);
+						
+					}
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					throw new RuntimeException("Erro ao ler informações!", e);
+				}finally {
+					ConnectionDatabase.closeConnection(con, stmt, rs);
+				}
+				return idVenda;
+			}
 	
 	
 }
